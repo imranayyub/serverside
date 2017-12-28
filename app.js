@@ -81,7 +81,7 @@ app.use(express.static(path.join(__dirname,'views/index.html')));
 //connect to mongodb
 mongoose.Promise=global.Promise;
 mongoose.connect('mongodb://localhost:27017/user',{useMongoClient: true});
-
+//mongoose.connect('mongodb://localhost:27017/musiclist',{useMongoClient: true});
 //on successful connection
 mongoose.connection.on('connected', function () {
   console.log('connnected to database mongodb @27017 ');
