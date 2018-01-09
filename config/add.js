@@ -26,7 +26,7 @@ router.post('/', function (req, res, next) {
   newMusiclist.save(function (err, musiclist) {
     res.setHeader('Content-Type', 'application/json');
     if (err) {
-      res.json({msg: 'Failed to add to Musiclist'});
+      res.status(500).json({msg: 'Failed to add to Musiclist'});
     }
     else {
       res.json({msg: 'Added successfully'});
